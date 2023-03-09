@@ -15,26 +15,23 @@ MEAN Stack is a combination of the following components:
 
 # Step 1: Install NodeJs
 ``` Node.js ``` is a JavaScript runtime built on Chrome’s V8 JavaScript engine. ``` Node.js ``` is used in this tutorial to set up the Express routes and AngularJS controllers.
-Update and upgrade Ubuntu
 
-```
-sudo apt update && sudo apt upgrade
-```
+Run the following command as a user with sudo privileges to download and execute the NodeSource installation script:  
+`curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -`
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%201st.PNG)
 
-Add certificates
+The script will add the NodeSource signing key to your system, create an apt repository file, install all necessary packages, and refresh the apt cache. 
 
-```
-sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
- 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+Once the NodeSource repository is enabled, install Node.js and npm:  
+`sudo apt install nodejs`
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%20second.PNG)
 
-```
+The nodejs package contains both the node and npm binaries.
 
-# Install NodeJS
+To be able to compile native addons from npm you’ll need to install the development tools:  
+`sudo apt install build-essential`
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%20third.PNG)
 
-```
-sudo apt install -y nodejs
-```
 
 # Step 2: Install MongoDB
 MongoDB stores data in flexible, JSON-like documents.  For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages.
