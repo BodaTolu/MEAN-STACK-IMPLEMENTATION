@@ -59,6 +59,7 @@ Verify that the service is up and running
 ```
 sudo systemctl status mongodb
 ```
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mongodb%20status.PNG)
 
 Install npm – Node package manager.
 
@@ -72,6 +73,7 @@ We need ‘body-parser’ package to help us process JSON files passed in reques
 ```
 sudo npm install body-parser
 ```
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/body%20parser.PNG)
 
 Create a folder named ‘Books’
 
@@ -84,6 +86,7 @@ In the Books directory, Initialize npm project
 ```
 npm init
 ```
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mean.PNG)
 
 Add a file to it named ``` server.js ```
 
@@ -330,16 +333,28 @@ Start the server by running this command:
 ```
 node server.js
 ```
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%20server.js)
 
 The server is now up and running, we can connect it via port 3300. You can launch a separate Putty or SSH console to test what the curl command returns locally.
 
 ```
 curl -s http://localhost:3300
 ```
+It shall return an HTML page, it is hardly readable in the CLI, but we can also try and access it from the Internet.
+For this – you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
 
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/SG.PNG)
 
+Now you can access our Book Register web application from the Internet with a browser using a Public IP address or Public DNS name.
 
+A quick reminder on how to get your server’s Public IP and public DNS name:
+- You can find it in your AWS web console in EC2 details
+- Run `curl -s http://169.254.169.254/latest/meta-data/public-ipv4` for Public IP address or curl -s http://169.254.169.254/latest/meta-data/public-hostname for Public DNS name.
 
+This is how your WebBook Register Application will look in the browser:
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/web%20page.PNG)
+
+Congratulations! You just implemented a MEAN Stack project!
 
 
 
