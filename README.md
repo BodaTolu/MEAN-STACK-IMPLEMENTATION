@@ -16,20 +16,26 @@ MEAN Stack is a combination of the following components:
 # Step 1: Install NodeJs
 ` Node.js ` is a JavaScript runtime built on Chrome’s V8 JavaScript engine. ` Node.js ` is used in this tutorial to set up the Express routes and AngularJS controllers.
 
-Run the following command as a user with sudo privileges to download and execute the NodeSource installation script:  
+Run the following command as a user with sudo privileges to download and execute the NodeSource installation script: 
+
 `curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -`
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%201st.PNG)
 
 The script will add the NodeSource signing key to your system, create an apt repository file, install all necessary packages, and refresh the apt cache. 
 
 Once the NodeSource repository is enabled, install Node.js and npm:  
+
 `sudo apt install nodejs`
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%20second.PNG)
 
 The nodejs package contains both the node and npm binaries.
 
 To be able to compile native addons from npm you’ll need to install the development tools:  
+
 `sudo apt install build-essential`
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/node%20third.PNG)
 
 
@@ -47,9 +53,11 @@ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/
 # Start The server
 
 ` sudo service mongodb start `
+
 Verify that the service is up and running
 
 ` sudo systemctl status mongodb `
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mongodb%20status.PNG)
 
 Install npm – Node package manager.
@@ -57,9 +65,11 @@ Install npm – Node package manager.
 ` sudo apt install -y npm `
 
 Install ` body-parser ` package
+
 We need ‘body-parser’ package to help us process JSON files passed in requests to the server.
 
 ` sudo npm install body-parser `
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/body%20parser.PNG)
 
 Create a folder named ‘Books’
@@ -69,6 +79,7 @@ Create a folder named ‘Books’
 In the Books directory, Initialize npm project
 
 ` npm init `
+
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mean.PNG)
 
 Add a file to it named ` server.js `
