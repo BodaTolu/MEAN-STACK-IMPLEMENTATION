@@ -14,7 +14,7 @@ MEAN Stack is a combination of the following components:
 - Knowledge on how configure inbound rules for security groups using the AWS console.
 
 # Step 1: Install NodeJs
-``` Node.js ``` is a JavaScript runtime built on Chrome’s V8 JavaScript engine. ``` Node.js ``` is used in this tutorial to set up the Express routes and AngularJS controllers.
+` Node.js ` is a JavaScript runtime built on Chrome’s V8 JavaScript engine. ` Node.js ` is used in this tutorial to set up the Express routes and AngularJS controllers.
 
 Run the following command as a user with sudo privileges to download and execute the NodeSource installation script:  
 `curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -`
@@ -37,64 +37,45 @@ To be able to compile native addons from npm you’ll need to install the develo
 MongoDB stores data in flexible, JSON-like documents.  For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages.
 mages/WebConsole.gif
 
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
-
-```
+` sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list `
 
 ## Install MongoDB
 
-```
-sudo apt install -y mongodb
-```
+` sudo apt install -y mongodb `
 
 # Start The server
 
-```
-sudo service mongodb start
-```
+` sudo service mongodb start `
 Verify that the service is up and running
 
-```
-sudo systemctl status mongodb
-```
+` sudo systemctl status mongodb `
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mongodb%20status.PNG)
 
 Install npm – Node package manager.
 
-```
-sudo apt install -y npm
-```
+` sudo apt install -y npm `
 
-Install ``` body-parser ``` package
+Install ` body-parser ` package
 We need ‘body-parser’ package to help us process JSON files passed in requests to the server.
 
-```
-sudo npm install body-parser
-```
+` sudo npm install body-parser `
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/body%20parser.PNG)
 
 Create a folder named ‘Books’
 
-```
-mkdir Books && cd Books
-```
+` mkdir Books && cd Books `
 
 In the Books directory, Initialize npm project
 
-```
-npm init
-```
+` npm init `
 ![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mean.PNG)
 
-Add a file to it named ``` server.js ```
+Add a file to it named ` server.js `
 
-```
-vi server.js
-```
+` vi server.js `
 
-Copy and paste the web server code below into the ``` server.js ``` file.
+Copy and paste the web server code below into the ` server.js ` file.
 
 ```
 var express = require('express');
