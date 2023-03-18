@@ -2,6 +2,8 @@
 
 MEAN Stack is a combination of the following components:
 
+![](https://github.com/Adedoja/Mean-Stack-Implementation/blob/main/MEAN%20STACK/mean%20pics.PNG)
+
 - MongoDB (Document database) – Stores and allows retrieval of data.
 - Express (Back-end application framework) – Makes requests to Database for Reads and Writes.
 - Angular (Front-end application framework) – Handles Client and Server Requests
